@@ -8,14 +8,14 @@
 
 import SwiftUI
 
-struct FAText: View {
+public struct FAText: View {
     
     var iconName: String
     private var icon: FAIcon {
         return FontAwesome.shared.icon(byName: iconName) ?? FontAwesome.shared.icon(byName: "question-square")!
     }
     var size: CGFloat
-    var style: FAStyle? = nil
+    var style: FAStyle?
     private var weight: Font.Weight {
         if let style = style {
             return style.weight
@@ -24,7 +24,13 @@ struct FAText: View {
         }
     }
     
-    var body: some View {
+    public init(iconName: String, size: CGFloat, style: FAStyle? = nil) {
+        self.iconName = iconName
+        self.size = size
+        self.style = style
+    }
+    
+    public var body: some View {
         Text(icon.unicodeString)
             .font(Font.custom(icon.collection.rawValue, size: size))
             .fontWeight(weight)

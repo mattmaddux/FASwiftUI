@@ -61,13 +61,18 @@ struct FAPickerCell: View {
     }
 }
 
-struct FAPicker: View {
+public struct FAPicker: View {
     
     @ObservedObject var search: FASearchHolder = FASearchHolder()
     @Binding var showing: Bool
     @Binding var selected: String?
     
-    var body: some View {
+    public init(showing: Binding<Bool>, selected: Binding<String?>) {
+        self._showing = showing
+        self._selected = selected
+    }
+    
+    public var body: some View {
         NavigationView {
             VStack(alignment: .center) {
                 FASearchBar(query: self.$search.searchQuery, clearAction: self.search.clear)

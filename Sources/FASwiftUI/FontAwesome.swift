@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-class FontAwesome {
+public class FontAwesome {
     
     // ======================================================= //
     // MARK: - Shared Instance
     // ======================================================= //
     
-    static var shared: FontAwesome = FontAwesome()
+    public static var shared: FontAwesome = FontAwesome()
     
     // ======================================================= //
     // MARK: - Published Properties
@@ -42,11 +42,11 @@ class FontAwesome {
     // MARK: - Methods
     // ======================================================= //
     
-    func icon(byName name: String) -> FAIcon? {
+    public func icon(byName name: String) -> FAIcon? {
         return store[name.lowercased()]
     }
     
-    func search(query: String) -> [String: FAIcon] {
+    public func search(query: String) -> [String: FAIcon] {
         let filtered = store.filter() {
             if $0.key.contains(query) {
                 return true

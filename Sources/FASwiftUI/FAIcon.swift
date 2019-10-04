@@ -12,7 +12,7 @@ import SwiftUI
 // MARK: - Style Enum
 // ======================================================= //
 
-enum FAStyle: String, Codable {
+public enum FAStyle: String, Codable {
     case light
     case regular
     case solid
@@ -53,17 +53,17 @@ enum FACollection: String {
 // MARK: - Icon Struct
 // ======================================================= //
 
-struct FAIcon: Identifiable, Decodable, Comparable {
+public struct FAIcon: Identifiable, Decodable, Comparable {
     
     // ======================================================= //
     // MARK: - Properties
     // ======================================================= //
     
-    var id: String?
-    var label: String
-    var unicode: String
-    var styles: [FAStyle]
-    var searchTerms: [String]
+    public var id: String?
+    public var label: String
+    public var unicode: String
+    public var styles: [FAStyle]
+    public var searchTerms: [String]
     
     
     var collection: FACollection {
@@ -84,7 +84,7 @@ struct FAIcon: Identifiable, Decodable, Comparable {
     // MARK: - Initializer
     // ======================================================= //
     
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         label = try values.decode(String.self, forKey: .label)
         unicode = try values.decode(String.self, forKey: .unicode)
@@ -102,14 +102,14 @@ struct FAIcon: Identifiable, Decodable, Comparable {
     // MARK: - Coding Keys
     // ======================================================= //
     
-    enum CodingKeys: String, CodingKey {
+    public enum CodingKeys: String, CodingKey {
         case label
         case unicode
         case styles
         case search
     }
     
-    enum SearchKeys: String, CodingKey {
+    public enum SearchKeys: String, CodingKey {
         case terms
     }
     
@@ -148,11 +148,11 @@ struct FAIcon: Identifiable, Decodable, Comparable {
     // MARK: - Comparable
     // ======================================================= //
     
-    static func < (lhs: FAIcon, rhs: FAIcon) -> Bool {
+    public static func < (lhs: FAIcon, rhs: FAIcon) -> Bool {
         return lhs.id ?? lhs.label < lhs.id ?? rhs.label
     }
     
-    static func == (lhs: FAIcon, rhs: FAIcon) -> Bool {
+    public static func == (lhs: FAIcon, rhs: FAIcon) -> Bool {
         return lhs.id ?? lhs.label == lhs.id ?? rhs.label
     }
 }
