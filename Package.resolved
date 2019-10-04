@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "QGrid",
+        "repositoryURL": "https://github.com/Q-Mobile/QGrid",
+        "state": {
+          "branch": null,
+          "revision": "ab5a0428d2b192df92af5eba4ecb48f574c3612d",
+          "version": "0.1.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
