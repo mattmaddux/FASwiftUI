@@ -41,6 +41,8 @@ struct ContentView: View {
 }
 ```
 
+![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/icon-regular.png)
+
 You can also choose an alternate style.
 (This is ignored if the icon is a brand and currently duotone is not supported and will default back to regular.)
 
@@ -55,6 +57,8 @@ struct ContentView: View {
 }
 ```
 
+![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/icon-fill.png)
+
 Set the color as you would any text.
 
 ```swift
@@ -68,6 +72,8 @@ struct ContentView: View {
     }
 }
 ```
+
+![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/icon-red.png)
 
 Have the user select an icon with an easy string binding
 
@@ -95,6 +101,7 @@ struct ContentView: View {
     }
 }
 ```
+![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/picker.gif)
 
 Or perform a search manually for a dictionary of Icons
 
