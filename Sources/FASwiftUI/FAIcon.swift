@@ -46,6 +46,7 @@ public enum FAStyle: String, Codable {
 
 enum FACollection: String {
     case pro = "Font Awesome 5 Pro"
+    case free = "Font Awesome 5 Free"
     case brands = "Font Awesome 5 Brands"
 }
 
@@ -69,8 +70,10 @@ public struct FAIcon: Identifiable, Decodable, Comparable {
     var collection: FACollection {
         if styles.contains(.brands) {
             return .brands
-        } else {
+        } else if UIFont.familyNames.contains(FACollection.pro.rawValue){
             return .pro
+        } else {
+            return .free
         }
     }
     
