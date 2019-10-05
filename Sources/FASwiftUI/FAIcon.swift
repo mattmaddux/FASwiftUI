@@ -39,6 +39,24 @@ enum FACollection: String {
     case pro = "Font Awesome 5 Pro"
     case free = "Font Awesome 5 Free"
     case brands = "Font Awesome 5 Brands"
+    
+    static var availableCollection: [FACollection] {
+        var result = [FACollection]()
+        if FACollection.isAvailable(collection: .pro) {
+            result.append(.pro)
+        }
+        if FACollection.isAvailable(collection: .free) {
+            result.append(.free)
+        }
+        if FACollection.isAvailable(collection: .brands) {
+            result.append(.brands)
+        }
+        return result
+    }
+    
+    static func isAvailable(collection: FACollection) -> Bool {
+        return UIFont.familyNames.contains(collection.rawValue)
+    }
 }
 
 // ======================================================= //
@@ -61,7 +79,7 @@ public struct FAIcon: Identifiable, Decodable, Comparable {
     var collection: FACollection {
         if styles.contains(.brands) {
             return .brands
-        } else if UIFont.familyNames.contains(FACollection.pro.rawValue){
+        } else if FACollection.isAvailable(collection: .pro) {
             return .pro
         } else {
             return .free
