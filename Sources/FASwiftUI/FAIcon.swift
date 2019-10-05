@@ -29,15 +29,6 @@ public enum FAStyle: String, Codable {
             return .regular
         }
     }
-    
-    var collection: FACollection {
-        switch self {
-        case .brands:
-            return .brands
-        default:
-            return .pro
-        }
-    }
 }
 
 // ======================================================= //
