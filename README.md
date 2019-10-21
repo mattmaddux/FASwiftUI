@@ -18,13 +18,17 @@ Easily use FontAwesome in your SwiftUI projects. Supports Font Awesome 5 Pro or 
     * Font Awesome 5 [Free/Pro]-Regular-400.otf
     * Font Awesome 5 [Free/Pro]-Solid-900.otf
     * Font Awesome 5 Pro-Light-300.otf (Pro Only)
-4. Add Fonts to Info.plist
+4. Add files to target - For each of the files in the last step:
+    1. Select the file in Project Navigator
+    2. Open the Inspectors bar on the right and select the file inspector (first tab)
+    3. Under Target Membership select each target you need to use FASwiftUI
+5. Add Fonts to Info.plist
     1. Open your project's info.plist
     2. Right-Click in a blank area and choose "Add Row"
     3. Name the new entry "Fonts provided by application"
     4. Expand the entry by clicking the triangle to the left
     5. Add a new entry for each of the "otf" files you added to your project, using the full filename including the extension
-5. You're done!
+6. You're done!
 
 
 ### Usage
