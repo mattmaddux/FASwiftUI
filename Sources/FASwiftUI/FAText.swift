@@ -25,7 +25,7 @@ public struct FAText: View {
     }
     
     public init(iconName: String, size: CGFloat, style: FAStyle? = nil) {
-        self.iconName = iconName
+        self.iconName = iconName.hasPrefix("fa-") ? String(iconName.dropFirst(3)) : iconName
         self.size = size
         self.style = style
     }
