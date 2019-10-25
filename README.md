@@ -8,7 +8,7 @@ Easily use FontAwesome in your SwiftUI projects. Supports Font Awesome 5 Pro or 
 ----------------------------------
 1. Add the Swift package to your Xcode project
     1. File -> Swift Packages -> Add Package Dependency
-    2. Enter <git url>
+    2. Enter https://github.com/mattmaddux/FASwiftUI.git
 2. Download Font Awesome
     1. Go to https://fontawesome.com/download
     2. Download the Pro or Free version
