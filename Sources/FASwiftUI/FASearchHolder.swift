@@ -6,6 +6,8 @@
 //  Copyright © 2019 Matt Maddux. All rights reserved.
 //
 
+#if os(iOS)
+
 import SwiftUI
 
 class FASearchHolder: ObservableObject {
@@ -62,3 +64,5 @@ class FASearchHolder: ObservableObject {
         }
     }
 }
+
+#endif
