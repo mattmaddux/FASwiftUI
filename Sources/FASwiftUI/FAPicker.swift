@@ -9,6 +9,8 @@
 import SwiftUI
 import QGrid
 
+#if os(iOS)
+
 struct FASearchBar: View {
 
     @Environment(\.colorScheme) var colorScheme: ColorScheme
@@ -49,14 +51,6 @@ struct FAPickerCell: View {
                     .frame(width: 55, height: 55)
             }
         }
-//        Button(action: {
-//            self.selected = self.icon
-//        }, label: {
-//            FAText(icon: icon, size: 35)
-//                .foregroundColor(colorScheme == .light ? Color.black : Color.white)
-//                .frame(width: 55, height: 55)
-//        })
-//        .background(selected == icon ? (colorScheme == .light ? Color.black.opacity(0.2) : Color.white.opacity(0.2)) : Color.clear)
         .cornerRadius(5)
     }
 }
@@ -85,8 +79,6 @@ public struct FAPicker: View {
                           hSpacing: 10,
                           vPadding: 10,
                           hPadding: 10) { icon in
-//                            Text("Hello")
-//                            FAPickerCell(icon: icon, selected: self.$selected)
                             FAPickerCell(icon: icon, action: {
                                 self.selected = icon.id
                                 self.showing = false
@@ -107,22 +99,9 @@ public struct FAPicker: View {
                 }
             }
             .navigationBarTitle("Icon Search", displayMode: .inline)
-//            .navigationBarItems(leading:
-//                Button(action: {
-//                    self.selected = self.initialSelection
-//                    self.showing = false
-//                }) {
-//                    Text("Cancel")
-//                },
-//                                trailing:
-//                Button(action: {
-//                    print("Done")
-//                }) {
-//                    Text("Done")
-//                        .disabled(self.selected == nil)
-//                }
-//            )
         }
     }
 
 }
+
+#endif

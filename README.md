@@ -79,7 +79,7 @@ struct ContentView: View {
 
 ![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/icon-red.png)
 
-Have the user select an icon with an easy string binding
+Have the user select an icon with an easy string binding (not available on macOS)
 
 ```swift
 import SwiftUI
