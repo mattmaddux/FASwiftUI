@@ -12,11 +12,7 @@ import SwiftUI
 
 class FASearchHolder: ObservableObject {
     
-    @Published var searchQuery: String = "" {
-        didSet {
-            print("Set: \(searchQuery)")
-        }
-    }
+    @Published var searchQuery: String = ""
     @Published var searchResults: [String: FAIcon]?
     
     private var keyboardVisible: Bool = false
