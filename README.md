@@ -109,7 +109,3 @@ struct ContentView: View {
 
 Or perform a search manually for a dictionary of Icons
 
-
-### Dependencies (Auto Installed with Swift Package)
-----------------------------------
-QGrid - https://github.com/Q-Mobile/QGrid
