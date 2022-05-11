@@ -1,6 +1,6 @@
 # FASwiftUI
 
-Easily use FontAwesome in your SwiftUI projects. Supports Font Awesome 5 Pro or Free. Easily use Font Awesome icons as text in your SwiftUI views.
+Easily integrate FontAwesome into your SwiftUI projects. Use Font Awesome icons as text in your SwiftUI views. Supports Font Awesome Pro or Free.
 
 (Does not currently support the Duotone style.)
 
