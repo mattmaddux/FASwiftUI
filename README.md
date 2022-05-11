@@ -1,6 +1,6 @@
 # FASwiftUI
 
-Easily use FontAwesome in your SwiftUI projects. Supports Font Awesome 5 Pro or Free. Easily use Font Awesome icons as text in your SwiftUI views. Use an included picker view to search for and select icons.
+Easily use FontAwesome in your SwiftUI projects. Supports Font Awesome 5 Pro or Free. Easily use Font Awesome icons as text in your SwiftUI views.
 
 (Does not currently support the Duotone style.)
 
@@ -105,7 +105,4 @@ struct ContentView: View {
     }
 }
 ```
-![Regualr Icon Screenshot](https://raw.githubusercontent.com/mattmaddux/FASwiftUI/master/picker.gif)
-
-Or perform a search manually for a dictionary of Icons
 
