@@ -46,6 +46,19 @@ public class FontAwesome {
         return store[name.lowercased()]
     }
     
+    // icon(byAlias:) added to allow FA5 backwards compatibility where names have changed and moved to an aliases array
+    public func icon(byAlias name: String) -> FAIcon? {
+        var iconName = ""
+        for item in store {
+            if let aliasNames = item.value.aliasNames, aliasNames.contains(name) {
+                iconName = item.value.id ?? name
+                print("found \(name) by alias as \(iconName)")
+                return store[iconName.lowercased()]
+            }
+        }
+        return store[iconName.lowercased()]
+    }
+    
     public func search(query: String) -> [String: FAIcon] {
         let filtered = store.filter() {
             if $0.key.contains(query) {
