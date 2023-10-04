@@ -16,9 +16,9 @@ Easily integrate FontAwesome 5 or 6 into your SwiftUI projects. Use Font Awesome
     * icons.json
     AND EITHER
         * Font Awesome 6 Brands-Regular-400.otf
-        * Font Awesome 6 [Free/Pro]-Regular-400.otf
-        * Font Awesome 6 [Free/Pro]-Solid-900.otf
-        * Font Awesome 6 Pro-Light-300.otf (Pro Only)
+        * Font Awesome 6 [Free/Pro/Sharp]-Regular-400.otf
+        * Font Awesome 6 [Free/Pro/Sharp]-Solid-900.otf
+        * Font Awesome 6 [Pro/Sharp]-Light-300.otf (Pro Only)
     OR
         * Font Awesome 5 Brands-Regular-400.otf
         * Font Awesome 5 [Free/Pro]-Regular-400.otf
