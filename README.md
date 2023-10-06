@@ -1,6 +1,6 @@
 # FASwiftUI
 
-Easily integrate FontAwesome 5 or 6 into your SwiftUI projects. Use Font Awesome icons as text in your SwiftUI views. Supports Font Awesome Pro or Free.
+Easily integrate FontAwesome 6 into your SwiftUI projects. Use Font Awesome icons as text in your SwiftUI views. Supports FontAwesome Pro or Free.
 
 (Does not currently support the Duotone style.)
 
@@ -13,17 +13,15 @@ Easily integrate FontAwesome 5 or 6 into your SwiftUI projects. Use Font Awesome
     1. Go to https://fontawesome.com/download
     2. Download the Pro or Free version
 3. Drag the following files from the download to your project:
-    * icons.json
-    AND EITHER
-        * Font Awesome 6 Brands-Regular-400.otf
-        * Font Awesome 6 [Free/Pro]-Regular-400.otf
-        * Font Awesome 6 [Free/Pro]-Solid-900.otf
-        * Font Awesome 6 Pro-Light-300.otf (Pro Only)
-    OR
-        * Font Awesome 5 Brands-Regular-400.otf
-        * Font Awesome 5 [Free/Pro]-Regular-400.otf
-        * Font Awesome 5 [Free/Pro]-Solid-900.otf
-        * Font Awesome 5 Pro-Light-300.otf (Pro Only)
+    * /metadata/icon-families.json
+    * /otfs/Font Awesome 6 Brands-Regular-400.otf
+    * /otfs/Font Awesome 6 Pro-Light-300.otf (Pro Only)
+    * /otfs/Font Awesome 6 [Pro/Free]-Regular-400.otf
+    * /otfs/Font Awesome 6 [Pro/Free]-Solid-900.otf
+    * /otfs/Font Awesome 6 Pro-Thin-100.otf (Pro Only)
+    * /otfs/Font Awesome 6 Sharp-Light-300.otf (Pro Only)
+    * /otfs/Font Awesome 6 Sharp-Regular-400.otf (Pro Only)
+    * /otfs/Font Awesome 6 Sharp-Solid-900.otf (Pro Only)
 4. Add files to target - For each of the files in the last step:
     1. Select the file in Project Navigator
     2. Open the Inspectors bar on the right and select the file inspector (first tab)

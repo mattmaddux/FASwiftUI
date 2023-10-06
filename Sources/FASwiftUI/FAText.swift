@@ -25,22 +25,6 @@ public struct FAText: View {
         
         if let icon = FontAwesome.shared.icon(byName: self.iconName) {
             self.icon = icon
-        } else {
-            // Many FA5 names change in FA6 and old names added to aliases array
-            if let iconAlias = FontAwesome.shared.icon(byAlias: self.iconName) {
-                self.icon = iconAlias
-            } else {
-                // Backwards compatibility for FA5 vs FA6 as font ID for circle-question has changed
-                // if icon not found use FA5 question-circle
-                if let iconFailed5 = FontAwesome.shared.icon(byName: "question-circle") {
-                    self.icon = iconFailed5
-                } else {
-                    // if question-circle not found use FA6 circle-question
-                    self.icon = FontAwesome.shared.icon(byName: "circle-question")!
-                }
-            }
-            self.style = .regular
-            print("FASwiftUI: Icon \"\(iconName)\" not found. Check list at https://fontawesome.com/icons for set availability.")
         }
         
         if !self.icon.styles.contains(self.style) {

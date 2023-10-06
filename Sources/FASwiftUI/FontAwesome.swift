@@ -27,7 +27,7 @@ public class FontAwesome {
     // ======================================================= //
     
     init() {
-        let fileURL = Bundle.main.url(forResource: "icons", withExtension: "json")!
+        let fileURL = Bundle.main.url(forResource: "icon-families", withExtension: "json")!
         let jsonString = try! String(contentsOf: fileURL, encoding: .utf8)
         let jsonData = jsonString.data(using: .utf8)!
         let decoder = JSONDecoder()

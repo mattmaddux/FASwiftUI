@@ -49,13 +49,13 @@ enum FACollection: String {
 
     static var availableCollection: [FACollection] {
         var result = [FACollection]()
-        if FACollection.isAvailable(collection: .pro) || FACollection.isAvailable(collection: .pro5) {
+        if FACollection.isAvailable(collection: .pro) {
             result.append(.pro)
         }
-        if FACollection.isAvailable(collection: .free) || FACollection.isAvailable(collection: .free5) {
+        if FACollection.isAvailable(collection: .free) {
             result.append(.free)
         }
-        if FACollection.isAvailable(collection: .brands) || FACollection.isAvailable(collection: .brands5) {
+        if FACollection.isAvailable(collection: .brands) {
             result.append(.brands)
         }
         if FACollection.isAvailable(collection: .sharp) {
