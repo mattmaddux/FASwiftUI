@@ -17,6 +17,7 @@ public enum FAStyle: String, Codable {
     case regular
     case solid
     case brands
+    case sharp
     case duotone
     // FA6 added thin style
     case thin
@@ -44,10 +45,7 @@ enum FACollection: String {
     case pro = "Font Awesome 6 Pro"
     case free = "Font Awesome 6 Free"
     case brands = "Font Awesome 6 Brands"
-    // FA5 backwards compatibility
-    case pro5 = "Font Awesome 5 Pro"
-    case free5 = "Font Awesome 5 Free"
-    case brands5 = "Font Awesome 5 Brands"
+    case sharp = "Font Awesome 6 Sharp"
 
     static var availableCollection: [FACollection] {
         var result = [FACollection]()
@@ -59,6 +57,9 @@ enum FACollection: String {
         }
         if FACollection.isAvailable(collection: .brands) || FACollection.isAvailable(collection: .brands5) {
             result.append(.brands)
+        }
+        if FACollection.isAvailable(collection: .sharp) {
+            result.append(.sharp)
         }
         return result
     }
@@ -93,6 +94,8 @@ public struct FAIcon: Identifiable, Decodable, Comparable {
     var collection: FACollection {
         if styles.contains(.brands) {
             return .brands
+        } else if styles.contains(.sharp) {
+            return .sharp
         } else if FACollection.isAvailable(collection: .pro) {
             return .pro
         } else {
