@@ -58,5 +58,7 @@ public struct FAText: View {
         Text(icon.unicodeString)
             .font(Font.custom(icon.collection.rawValue, size: size))
             .fontWeight(weight)
+            .lineLimit(1)
+            .fixedSize()
     }
 }
